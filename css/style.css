@@ -2,8 +2,6 @@
 @import url("grid.css");
 @import url("button.css");
 
-
-
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -63,5 +61,8 @@ body{
     top: 50%;
     transform: translate(0, -50%);
     text-align: center;
+}
 
+#how-it-work{
+    text-align: center;
 }
