@@ -8,6 +8,36 @@ body{
     padding: 0;
 }
 
+a {
+    display: inline-block;
+}
+
+#header .btn {
+    background-color: rgb(84, 209, 84);
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 16px;
+    text-decoration: none;
+}
+#header .btn:hover{
+    background-color: rgb(84, 180, 84);
+}
+
+#header nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#header nav a:hover, #header nav a.active {
+    background-color: rgba(84, 209, 84, 0.3);
+}
+
+#header h1 {
+    font-size: 54px;
+}
+
 #header{
     background: #000 url("../images/background-header.jpg") no-repeat;
     background-size: cover;
