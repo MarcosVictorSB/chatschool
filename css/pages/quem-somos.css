@@ -1,0 +1,40 @@
+@import url('../style.css');
+
+#header.page-quem-somos{
+    background-image: url("../../images/background-quem-somos.jpg");
+}
+
+
+#intro h2, #valores{
+    font-size: 20px;
+}
+
+#intro h2{
+    text-align: left;
+}
+
+#intro h2:after{
+    margin: 5px 0 0 0;
+}
+
+#intro img{
+    margin-left: 54px;
+}
+
+#intro p{
+    text-align: justify;
+}
+
+
+#valores {
+    background-color: #f3f0e7;
+}
+
+#valores p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#valores h2:after{
+    display: none;
+}
