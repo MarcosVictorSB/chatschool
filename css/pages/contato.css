@@ -1,4 +1,4 @@
-@import "form.css";
+@import url("form.css");
 @import url('../style.css');
 
 #header.page-contato{
