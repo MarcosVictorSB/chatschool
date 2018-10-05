@@ -7,7 +7,7 @@
     <title>Contatos - Chatschool</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/pages/contato.css">
+    <link rel="stylesheet" href="css/pages/contato.min.css">
 </head>
 <body>
     <header id="header" class="page-contato">
@@ -46,7 +46,9 @@
                elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet
             </p>
             <div class="container">
-                <form class="row">
+                <!-- https://github.com/dwyl/html-form-send-email-via-google-script-without-server -->
+                <form class="row" action="https://script.google.com/macros/s/AKfycby34O--P63BK_ZgZKbwGHUYZaTvLwplRwwI6M-6dKrZGEBi5zo/exec"
+                method="post">
                     <div class="col col-desktop-6 col-6">
                         <div class="input-control">
                             <input id="nome" type="text" name="nome" required placeholder="Nome ...">
@@ -65,7 +67,7 @@
                         <textarea id="mensagem"  name="mensagem" cols="30" rows="10" placeholder="Mensagem"></textarea>
                         <!--<label for="mensagem">Mensagem</label>!-->
                     </div>
-                    <input type="submit" value="Salvar" class="btn orange">
+                    <input type="submit" value="Enviar" class="btn orange">
                 </form>
             </div>
         </section>
@@ -103,5 +105,29 @@
     <div id="copyight">
         &copy; Chatschool - 2017 - Todos os direitos reservados
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $('form').submit(function (event){
+            event.preventDefault();
+            $('form input[type="submit"]').val('Aguarde ...')
+                .attr('disable', true);
+            $.ajax({
+                type: $('form').attr('method'),
+                url: $('form').attr('action'),
+                data: $('form').serialize(),
+                success: function () {
+                    alert('Email enviado');
+                    $('form').trigger('reset');
+
+
+                    $('form input[type="submit"]').val('Enviar')
+                        .attr('disable', false);
+
+                }
+            });
+
+        });
+    </script>
 </body>
 </html>
