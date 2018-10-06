@@ -17,7 +17,6 @@
     padding: 10px 15px;
     font-weight: bold;
     margin-top: 20px;
-
 }
 
 #sidenav .nav-pills>li>a{
@@ -33,4 +32,48 @@
 
 #sidenav .nav-pills>li.active>a:hover, #sidenav .nav-pills>li.active>a:focus{
     background-color: #222;
+}
+
+#sidenav .nav>li>a:before{
+    content: '';
+    display: inline-block;
+    border: 1px solid #888;
+    border-radius: 100px;
+    width: 7px;
+    height: 7px;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+
+#sidenav .nav>li.online>a:before{
+    background-color: #2ecc71;
+}
+
+#sidenav .nav>li>a.action:before{
+    display: none;
+}
+
+#sidenav .nav>li {
+    position: relative;
+}
+#sidenav .nav>li>a.action{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 99;
+    font-weight: bold;
+    border: 2px solid #888;
+    border-radius: 100%;
+    color: #888888;
+    padding: 0 5px;
+    font-size: 12px;
+    text-align: center;
+    height: 20px;
+    line-height: 16px;
+}
+
+#sidenav .nav>li:hover>a.action{
+    display: block;
 }
