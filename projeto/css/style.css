@@ -1,0 +1,36 @@
+#sidenav{
+    background-color: #333;
+    color: #888;
+    padding-right: 0;
+
+}
+
+#sidenav a {
+    color: #888;
+}
+
+#sidenav .navbar{
+    margin-left: -17px;
+}
+
+#sidenav .nav-header{
+    padding: 10px 15px;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+#sidenav .nav-pills>li>a{
+    border-radius: 0;
+    padding: 5px 15px;
+}
+
+#sidenav .nav-pills>li.active>a{
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#sidenav .nav-pills>li.active>a:hover, #sidenav .nav-pills>li.active>a:focus{
+    background-color: #222;
+}
